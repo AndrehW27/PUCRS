@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Objeto de forma literal</h1>
+    <pre>
+        const pessoa = {
+            nome: "João",
+            idade: 25,
+            falar: function() {
+                console.log("Olá, meu nome é " + this.nome);
+            }
+        };
+    </pre>
+    <hr>
+
+    <h1>Objeto por fábricas</h1>
+    <pre id="factoryObject"></pre>
+    <pre>
+        function criarPessoa(nome, idade) {
+            return {
+                nome,
+                idade,
+                falar() {
+                    console.log(`Meu nome é ${nome} e tenho ${idade} anos.`);
+                }
+            };
+        }
+        const pessoa1 = criarPessoa("Maria", 30);
+        const pessoa2 = criarPessoa("Carlos", 40);
+    </pre>
+    <hr>
+
+    <h1>Objeto por construtor</h1> 
+    <pre id="constructorObject"></pre>
+    <pre>
+        function Pessoa(nome, idade) {
+            this.nome = nome;
+            this.idade = idade;
+            this.falar = function() {
+                console.log(`Meu nome é ${this.nome} e tenho ${this.idade} anos.`);
+            };
+        }
+        
+        const pessoa1 = new Pessoa("Ana", 28);
+    </pre> 
+    <hr> 
+
+    <h1>Objeto por protótipos</h1> 
+    <pre id="classPrototype"></pre>
+    <pre>
+        const prototipoPessoa = {
+            falar() {
+                console.log(`Meu nome é ${this.nome}`);
+            }
+        };
+        
+        const pessoa = Object.create(prototipoPessoa);
+        pessoa.nome = "Pedro";
+    </pre>
+    <hr>
+
+
+    <h1>Objeto por classes</h1>
+    <pre id="classObject"></pre>
+    <pre>
+        class Pessoa {
+            constructor(nome, idade) {
+                this.nome = nome;
+                this.idade = idade;
+            }
+        
+            falar() {
+                console.log(`Meu nome é ${this.nome} e tenho ${this.idade} anos.`);
+            }
+        }
+        
+        const pessoa1 = new Pessoa("Lucas", 35);
+    </pre>
+
+
+    <hr>
+    
+    <h1>Conceito de encapsulamento</h1>
+    <h1>Conceito de abstração</h1>
+    <h1>Conceito de herança</h1>   
+    <h1>Conceito de polimorfismo</h1>
+
+    <script>
+        document.getElementById('literalObject').textContent = JSON.stringify(pessoa, null, 2);
+        document.getElementById('factoryObject').textContent = JSON.stringify(pessoa1, null, 2);
+        document.getElementById('constructorObject').textContent = JSON.stringify(pessoa1, null, 2);
+        document.getElementById('classObject').textContent = JSON.stringify(pessoa1, null, 2);
+    </script>
+    <script src="script.js" type="text/javascript"></script>
+</body>
+</html>
