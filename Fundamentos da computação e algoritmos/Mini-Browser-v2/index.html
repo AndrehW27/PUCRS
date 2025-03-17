@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini-browser</title>
+
+    <link rel="icon" id="faveIconId" type="image/x-icon">
+
+    <link rel="stylesheet" href="styles.css">   
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet"> 
+</head>
+<body>
+
+    <container class="container" id="containerId">
+        <div class="tabs">
+            <div class="original-tab">                     
+                <div class="left-group">
+                    <img class="img-icon" id="tabIconId" src="./assets/icon-tab.png" alt="Back" />                   
+                    <p id="titleId">Google</p>
+                </div>         
+                <button onclick="closeTab()" class="btn-close-tab">
+                    <img class="img" src="./assets/close.png" alt="Back" /> 
+                </button>
+            </div>
+            <!-- <button class="new-tab">
+                <img class="img" src="./assets/add.png" alt="Back" /> 
+            </button> -->
+            <div class="window-controls">
+                <button onclick="minimize()" class="btn-window">
+                    <img class="img" src="./assets/close_fullscreen.png" alt="Back" /> 
+                </button>
+                <button onclick="maxmize()" class="btn-window">
+                    <img class="img" src="./assets/open_fullscreen.png" alt="Back" /> 
+                </button>
+                <button onclick="closewindow()" class="btn-window">
+                    <img class="img" src="./assets/close.png" alt="Back" /> 
+                </button>
+            </div>
+        </div>
+        <div class="url-container">
+            <button onclick="goBack()" class="btn">
+                <img class="img" src="./assets/arrow-back.png" alt="Back" /> 
+            </button>
+            <button onclick="goForward()" class="btn">
+                <img class="img" src="./assets/arrow-forward.png" alt="Back" /> 
+            </button>
+            <button onclick="refreshPage()" class="btn">
+                <img class="img" src="./assets/refresh.png" alt="Back" /> 
+            </button>
+            <button onclick="goHome()" class="btn">
+                <img class="img" src="./assets/home.png" alt="Back" /> 
+            </button>
+            <div class="url" >
+                <input id="urlInputId" type="text" class="url-input" placeholder="Pesquisar ou digitar URL">
+                <!-- <div class="url-history-box" id="urlHistoryBoxId"></div> -->
+            </div>
+            <!-- <div class="history">
+                <button onclick="newTab()" class="btn">
+                    <img class="img" src="./assets/add.png" alt="Back" /> 
+                </button>                
+            </div> -->
+            <div class="history">
+                <button onclick="seeHistory()" class="btn">
+                    <img class="img" src="./assets/history.png" alt="Back" /> 
+                </button>   
+                <button onclick="popHistory()" class="btn-limpar">
+                    <p>pop</p>
+                </button>     
+                <button onclick="clearHistory()" class="btn-limpar">
+                    <p>clear</p>
+                </button>               
+            </div>
+        </div>
+        <div class="content">
+            <img class="img-site" id="contentImgId" src="./assets/google-search.png" alt="Google search">
+        </div>
+        <div class="history-list" id="historyListId">
+            <!-- <div class="history-item">
+                <p class="history-site" id="historySiteId">https://www.google.com/1231231231123123</p>
+                <p class="hora" id="historyHourId">2 horas atrás</p>
+            </div> -->
+        </div>
+        
+    </container>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
