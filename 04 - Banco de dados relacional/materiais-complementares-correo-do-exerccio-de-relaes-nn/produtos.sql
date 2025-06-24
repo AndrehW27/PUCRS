@@ -1,0 +1,10 @@
+insert into produtos values (1,'A. P. TCHEKHOV: Cartas para uma Poética',to_date('29/12/1995','dd/mm/yyyy'),'S',296,43);
+insert into produtos values (2,'ACADÊMICOS E MODERNOS - Textos Escolhidos 3',to_date('22/09/2002','dd/mm/yyyy'),'N',31,47);
+insert into produtos values (3,'ADAPTABILIDADE HUMANA: Uma Introdução à Antropologia',to_date('17/01/1998','dd/mm/yyyy'),'N',400,42);
+insert into produtos values (4,'ADMINISTRAÇÃO DO TRABALHO POLICIAL',to_date('25/08/2000','dd/mm/yyyy'),'N',265,26);
+insert into produtos values (5,'ADOÇÃO INTERNACIONAL e o Tráfico de Crianças',to_date('16/11/1998','dd/mm/yyyy'),'N',49,51);
+insert into produtos values (6,'AIURUOCA - MATUTU E PEDRA DO PAPAGAIO',to_date('19/08/1999','dd/mm/yyyy'),'N',326,41);
+insert into produtos values (7,'ALEX FLEMMING',to_date('23/09/2001','dd/mm/yyyy'),'S',24,43);
+insert into produtos values (8,'ALKALINE MAGMATISM IN CENTRAL-EASTERN PARAGUAY',to_date('20/08/1997','dd/mm/yyyy'),'N',143,45);
+insert into produtos values (9,'ALMANHAQUE PARA 1955 1º SEMESTRE',to_date('16/05/1998','dd/mm/yyyy'),'S',179,27);
+insert into produtos values (10,'ALMANHAQUE PARA 1949',to_date('20/06/2000','dd/mm/yyyy'),'N',86,21);
